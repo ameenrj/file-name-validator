@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.company.Application'
+        )
+    }
+}
+
+group = 'com.company'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile('junit:junit:4.12')
+    testCompile('org.assertj:assertj-core:3.10.0')
+    testCompile('com.github.stefanbirkner:system-rules:1.18.0')
+}
